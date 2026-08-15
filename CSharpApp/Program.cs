@@ -2,6 +2,13 @@ using System.Windows;
 
 namespace CSharApp
 {
-    public partial class App : Application
-    {}
+    public class Program
+    {
+        [STAThread]
+        static void Main()
+        {
+            var app = new App();
+            app.Run();
+        }
+    }
 }
