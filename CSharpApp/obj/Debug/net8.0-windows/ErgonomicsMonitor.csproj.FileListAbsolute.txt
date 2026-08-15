@@ -1,0 +1,2 @@
+C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ErgonomicsMonitor.csproj.AssemblyReference.cache
+C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ErgonomicsMonitor_MarkupCompile.cache
