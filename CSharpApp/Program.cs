@@ -1,6 +1,6 @@
 using System.Windows;
 
-namespace CSharApp
+namespace CSharpApp
 {
     public class Program
     {

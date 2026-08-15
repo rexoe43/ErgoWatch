@@ -1,9 +1,14 @@
 using System.Windows;
 
-namespace CSharApp
+namespace CSharpApp.Views
 {
-    public partial class ALertPopup : Window
+    public partial class AlertPopup : Window
     {
+        public AlertPopup()
+        {
+            InitializeComponent();
+        }
+
         public AlertPopup(string message, string details = "")
         {
             InitializeComponent();
@@ -13,14 +18,14 @@ namespace CSharApp
 
         private void OkButton_Click(object sender, RoutedEventArgs e)
         {
-            DialogResult = true;
-            Close();
+            this.DialogResult = true;
+            this.Close();
         }
 
         private void IgnoreButton_Click(object sender, RoutedEventArgs e)
         {
-            DialogResult = false;
-            Close();
+            this.DialogResult = false;
+            this.Close();
         }
     }
 }

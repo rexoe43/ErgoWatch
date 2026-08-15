@@ -21,7 +21,15 @@ namespace CSharpApp.Views
         {
             Dispatcher.Invoke(() =>
             {
-                LastAlertText.Text = $"Last Alert: {message}";
+                LastAlertText.Text = $"Última alerta: {message}";
+            });
+        }
+
+        public void UpdateTimer(int seconds)
+        {
+            Dispatcher.Invoke(() =>
+            {
+                TimerText.Text = $"⏱️ Temporizador: {seconds}/900 segundos";
             });
         }
     }
