@@ -1,1 +1,2 @@
 # ErgoWatch
+ErgoWatch is an enterprise-grade intelligent monitoring system designed to protect the physical health of workers in construction environments, where long shifts, repetitive physical exertion, and poor posture pose constant risks of musculoskeletal injuries and accumulated fatigue. The system combines computer vision with a desktop application to provide real-time monitoring, alerting both the worker and industrial safety supervisors when hazardous conditions are detected.
