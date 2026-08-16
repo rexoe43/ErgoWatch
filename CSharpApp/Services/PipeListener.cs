@@ -119,5 +119,22 @@ namespace CSharpApp.Services
         {
             AlertReceived?.Invoke(this, alert);
         }
+
+        public void SendResponse(string response)
+        {
+            if (_pipeServer != null && _pipeServer.IsConnected)
+            {
+                try
+                {
+                    var bytes = Encoding.UTF8.GetBytes(response + "\n");
+                    _pipeServer.Write(bytes, 0, bytes.Length);
+                    _pipeServer.Flush();
+                }
+                catch(Exception ex)
+                {
+                    Log.Error(ex, "Error sending the response");
+                }
+            }
+        }
     }
 }
