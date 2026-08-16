@@ -1,0 +1,32 @@
+2026-08-15 22:54:36.853 -06:00 [INF] Ergowatch started
+2026-08-15 22:56:05.144 -06:00 [INF] Ergowatch Closed
+2026-08-15 22:56:58.592 -06:00 [INF] Ergowatch started
+2026-08-15 22:57:23.952 -06:00 [INF] Ergowatch Closed
+2026-08-15 22:58:18.208 -06:00 [INF] Ergowatch started
+2026-08-15 23:03:35.579 -06:00 [INF] Ergowatch Closed
+2026-08-15 23:03:56.878 -06:00 [INF] Ergowatch started
+2026-08-15 23:03:57.232 -06:00 [INF] Named Pipe service started: ergonomics_pipe
+2026-08-15 23:03:57.236 -06:00 [INF] Communication Service Started
+2026-08-15 23:04:37.906 -06:00 [ERR] Error in the service (Named Pipe)
+System.IO.IOException: Ha terminado la canalización.
+   at System.IO.Pipes.PipeStream.PipeValueTaskSource.GetResult(Int16 token)
+   at System.IO.Pipes.PipeStream.PipeValueTaskSource.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at System.IO.Pipes.NamedPipeServerStream.WaitForConnection()
+   at CSharpApp.Services.PipeListener.ListenForConnections() in C:\Users\Kev\ErgoWatch\CSharpApp\Services\PipeListener.cs:line 56
+2026-08-15 23:04:38.896 -06:00 [INF] Named Pipe service stopped
+2026-08-15 23:04:38.896 -06:00 [INF] Ergowatch Closed
+2026-08-15 23:21:08.433 -06:00 [INF] Ergowatch started
+2026-08-15 23:21:08.827 -06:00 [INF] Named Pipe service started: ergonomics_pipe
+2026-08-15 23:21:08.830 -06:00 [INF] Communication Service Started
+2026-08-15 23:21:38.712 -06:00 [ERR] Error in the service (Named Pipe)
+System.IO.IOException: Ha terminado la canalización.
+   at System.IO.Pipes.PipeStream.PipeValueTaskSource.GetResult(Int16 token)
+   at System.IO.Pipes.PipeStream.PipeValueTaskSource.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at System.IO.Pipes.NamedPipeServerStream.WaitForConnection()
+   at CSharpApp.Services.PipeListener.ListenForConnections() in C:\Users\Kev\ErgoWatch\CSharpApp\Services\PipeListener.cs:line 59
+2026-08-15 23:21:39.729 -06:00 [INF] Named Pipe service stopped
+2026-08-15 23:21:39.730 -06:00 [INF] Ergowatch Closed

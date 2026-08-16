@@ -1,10 +1,9 @@
+using System.IO;
 using System.IO.Pipes;
 using System.Text;
 using Newtonsoft.Json;
 using CSharpApp.Models;
 using Serilog;
-using System.Diagnostics;
-using System.IO;
 
 namespace CSharpApp.Services
 {
@@ -27,6 +26,7 @@ namespace CSharpApp.Services
             _listenerThread.Start();
 
             Log.Information("Named Pipe service started: {PipeName}", PIPE_NAME);
+            Console.WriteLine($"Named Pipe service started: {PIPE_NAME}");
         }
 
         public void Stop()
@@ -35,6 +35,7 @@ namespace CSharpApp.Services
             _pipeServer?.Dispose();
             _listenerThread?.Join(1000);
             Log.Information("Named Pipe service stopped");
+            Console.WriteLine("Named pipe service stopped");
         }
 
         private void ListenForConnections()
@@ -43,6 +44,7 @@ namespace CSharpApp.Services
             {
                 try
                 {
+                    Console.WriteLine("Creating pipe and waiting for connection..");
                     _pipeServer = new NamedPipeServerStream(
                         PIPE_NAME,
                         PipeDirection.InOut,
@@ -50,19 +52,27 @@ namespace CSharpApp.Services
                         PipeTransmissionMode.Message,
                         PipeOptions.Asynchronous
                     );
-
+                    
+                    Console.WriteLine("Waiting for Python connection...");
                     Log.Debug("Waiting for Python connection..");
 
                     _pipeServer.WaitForConnection();
+
+                    Console.WriteLine("Client connected to pipe");
                     Log.Information("Client connected to pipe");
+
                     ProcessClient(_pipeServer);
+
                     _pipeServer.Disconnect();
                     _pipeServer.Dispose();
                     _pipeServer = null;
+
+                    Console.WriteLine("Client disconnected, waiting for new connection");
                 }
                 catch (Exception ex)
                 {
                     Log.Error(ex, "Error in the service (Named Pipe)");
+                    Console.WriteLine("Error: {ex.Message}");
                     Thread.Sleep(1000);
                 }
             }
@@ -83,13 +93,17 @@ namespace CSharpApp.Services
                         Thread.Sleep(100);
                         continue;
                     }
+
+                    Console.WriteLine($"Message received: {message}");
                     Log.Debug("Message received: {Mesage}", message);
+
                     ProcessMessage(message);
                 }
             }
             catch (Exception ex)
             {
                 Log.Error(ex, "Procesing error");
+                Console.WriteLine($"Processing error: {ex.Message}");
             }
         }
 
@@ -101,17 +115,20 @@ namespace CSharpApp.Services
 
                 if (alert != null)
                 {
+                    Console.WriteLine($"Alert received: {alert.Type} - {alert.Severity}");
                     Log.Information("Alert received: {Type} - {Severity} - {Message}", alert.Type, alert.Severity, alert.Message);
                     OnAlertReceived(alert);
                 }
                 else
                 {
+                    Console.WriteLine($"Could not deserialize: {message}");
                     Log.Warning("The message could not be deserialized: {Message}", message);
                 }
             }
             catch(Exception ex)
             {
                 Log.Error(ex, "Error with the processing message: {Message}", message);
+                Console.WriteLine($"Error processing: {ex.Message}");
             }
         }
 

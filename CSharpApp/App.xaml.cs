@@ -11,29 +11,47 @@ namespace CSharpApp
         private Forms.NotifyIcon? _trayIcon;
         private Window? _mainWindow;
         private PipeListener? _pipeListener;
+
         protected override void OnStartup(System.Windows.StartupEventArgs e)
         {
             base.OnStartup(e);
 
             LogService.Initialize();
 
+            
             CreateTrayIcon();
+
+            
             _mainWindow = new Views.MainWindow();
             _mainWindow.Show();
+
+            
+            StartPipeListener();
         }
 
         private void StartPipeListener()
         {
-            _pipeListener = new PipeListener();
-            _pipeListener.AlertReceived += OnAlertReceived;
-            _pipeListener.Start();
-            Log.Information("Communication Service Started");
+            try
+            {
+                _pipeListener = new PipeListener();
+                _pipeListener.AlertReceived += OnAlertReceived;
+                _pipeListener.Start();
+                Log.Information("Communication Service Started");
+                Console.WriteLine("Communication Service Started");
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error starting communication service");
+                Console.WriteLine($"Error: {ex.Message}");
+            }
         }
 
         private void OnAlertReceived(object? sender, AlertModel alert)
         {
             Log.Information("Alert received: {Type} - {Severity}", alert.Type, alert.Severity);
-            if(_mainWindow is Views.MainWindow mainWindow)
+            Console.WriteLine($"Alert received: {alert.Type} - {alert.Severity}");
+            
+            if (_mainWindow is Views.MainWindow mainWindow)
             {
                 mainWindow.UpdateStatus($"Warning: {alert.Message}");
                 mainWindow.UpdateLastAlert($"{alert.Type} - {alert.Severity}");
@@ -47,20 +65,23 @@ namespace CSharpApp
                             $"{alert.Type.ToUpper()}",
                             alert.Message,
                             Forms.ToolTipIcon.Warning
-
                         );
                     }
-                    
                 }
             }
         }
+
         private void CreateTrayIcon()
         {
             _trayIcon = new Forms.NotifyIcon();
-            _trayIcon.Icon = System.Drawing.Icon.ExtractAssociatedIcon(System.Windows.Forms.Application.ExecutablePath);
+            _trayIcon.Icon = System.Drawing.Icon.ExtractAssociatedIcon(
+                System.Windows.Forms.Application.ExecutablePath
+            );
             _trayIcon.Text = "Ergo Watch - Ergonomic Monitoring Application";
             _trayIcon.Visible = true;
+
             var contextMenu = new Forms.ContextMenuStrip();
+            
             var showItem = new Forms.ToolStripMenuItem("Show");
             showItem.Click += (s, e) =>
             {
@@ -72,6 +93,7 @@ namespace CSharpApp
                 }
             };
             contextMenu.Items.Add(showItem);
+
             var hideItem = new Forms.ToolStripMenuItem("Hide");
             hideItem.Click += (s, ev) =>
             {
@@ -81,7 +103,9 @@ namespace CSharpApp
                 }
             };
             contextMenu.Items.Add(hideItem);
+
             contextMenu.Items.Add(new Forms.ToolStripSeparator());
+
             var exitItem = new Forms.ToolStripMenuItem("Exit");
             exitItem.Click += (s, ev) =>
             {
@@ -90,7 +114,9 @@ namespace CSharpApp
                 System.Windows.Application.Current.Shutdown();
             };
             contextMenu.Items.Add(exitItem);
+
             _trayIcon.ContextMenuStrip = contextMenu;
+
             _trayIcon.DoubleClick += (s, ev) =>
             {
                 if (_mainWindow != null)
@@ -111,7 +137,7 @@ namespace CSharpApp
             _trayIcon.ShowBalloonTip(
                 3000,
                 "ErgoWatch",
-                "Ergonomic Monitor inicialized correctly",
+                "Ergonomic Monitor initialized correctly",
                 Forms.ToolTipIcon.Info
             );
         }
@@ -119,6 +145,7 @@ namespace CSharpApp
         protected override void OnExit(System.Windows.ExitEventArgs e)
         {
             _pipeListener?.Stop();
+            
             if (_trayIcon != null)
             {
                 _trayIcon.Visible = false;
@@ -127,7 +154,6 @@ namespace CSharpApp
             
             LogService.Shutdown();
             base.OnExit(e);
-            
         }
     }
 }
