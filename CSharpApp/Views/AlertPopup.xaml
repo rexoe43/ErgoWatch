@@ -1,0 +1,63 @@
+<Window x:Class ="CSharpApp.Views.AlertPopup"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Alert"
+    Height="250"
+    Width="400"
+    WindowStartupLocation="CenterScreen"
+    Topmost="True"
+    WindowStyle="None"
+    AllowsTransparency="True"
+    Background="Transparent">
+<Border Background="#FFF5F5F5"
+        CornerRadius="10"
+        Padding="20">
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                <TextBlock Text="Alert!"
+                            FontSize="32"
+                            Margin="0,0,10,0"/>
+                <TextBlock Text="Please take a break and stretch."
+                            FontSize="20"
+                            FontWeight="Bold"
+                            VerticalAlignment="Center"
+                            Foreground="#E74C3C"/>
+            </StackPanel>
+
+            <TextBlock x:Name="AlertMessage"
+                        Text="Bad posture detected. Please adjust your sitting position."
+                        FontSize="16"
+                        Margin="0,0,0,15"
+                        TextWrapping="Wrap"/>
+            <TextBlock x:Name="AlertDetails"
+                        Text="Details about the alert can be shown here."
+                        FontSize="12"
+                        Foreground="Gray"
+                        Margin="0,0,0,20"/>
+
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                <Button x:Name="OkButton"
+                        Content="Ok"
+                        Width="120"
+                        Height="35"
+                        Margin="0,0,10,0"
+                        Background="#2ECC71"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        Click="OkButton_Click"/>
+                <Button x:Name="IgnoreButton"
+                        Content="Ignore"
+                        Width="120"
+                        Height="35"
+                        Background="#95A5A6"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        Click="IgnoreButton_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</Window>
