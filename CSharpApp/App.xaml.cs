@@ -13,13 +13,13 @@ namespace CSharpApp
 
             CreateTrayIcon();
             _mainWindow = new Views.MainWindow();
-            _mainWindow.Hide();
+            _mainWindow.Show();
         }
 
         private void CreateTrayIcon()
         {
             _trayIcon = new Forms.NotifyIcon();
-            _trayIcon.Icon = System.Drawing.Icon.ExtractAssociatedIcon("System.Windows.Forms.Application.ExecutablePath");
+            _trayIcon.Icon = System.Drawing.Icon.ExtractAssociatedIcon(System.Windows.Forms.Application.ExecutablePath);
             _trayIcon.Text = "Ergo Watch - Ergonomic Monitoring Application";
             _trayIcon.Visible = true;
             var contextMenu = new Forms.ContextMenuStrip();
