@@ -23,11 +23,6 @@ namespace CSharpApp.Views
             this.Hide();
         }
 
-        private void MainWindow_Closing(object? sender, CancelEventArgs e)
-        {
-            e.Cancel = true;
-            this.Hide();
-        }
 
         private void OnTimerUpdated(object? sender, int seconds)
         {
