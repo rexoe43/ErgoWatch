@@ -1,5 +1,13 @@
 C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ErgonomicsMonitor.csproj.AssemblyReference.cache
+C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\Views\AlertPopup.baml
 C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\Views\MainWindow.baml
+C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\Views\AlertPopup.g.cs
 C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\Views\MainWindow.g.cs
 C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ErgonomicsMonitor_MarkupCompile.cache
+C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ErgonomicsMonitor.g.resources
+C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ErgonomicsMonitor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ErgonomicsMonitor.AssemblyInfoInputs.cache
+C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ErgonomicsMonitor.AssemblyInfo.cs
+C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ErgonomicsMonitor.csproj.CoreCompileInputs.cache
+C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ErgonomicsMonitor.sourcelink.json

@@ -1,10 +1,10 @@
 using System.Windows;
 
-namespace CSharApp
+namespace CSharpApp
 {
-    public partial class App : Application
+    public partial class App : System.Windows.Application
     {
-        protected override void OnStartup(StartupEventArgs e)
+        protected override void OnStartup(System.Windows.StartupEventArgs e)
         {
             base.OnStartup(e);
         }

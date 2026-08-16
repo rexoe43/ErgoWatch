@@ -27,9 +27,9 @@
                             Foreground="#E74C3C"/>
             </StackPanel>
 
-            <TextBloc x:Name="AlertMessage"
+            <TextBlock x:Name="AlertMessage"
                         Text="Bad posture detected. Please adjust your sitting position."
-                        FontSIze="16"
+                        FontSize="16"
                         Margin="0,0,0,15"
                         TextWrapping="Wrap"/>
             <TextBlock x:Name="AlertDetails"
