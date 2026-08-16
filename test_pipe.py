@@ -7,7 +7,7 @@ import pywin32_system32
 def send_alert(alert_data):
     try:
         handle = win32file.CreateFile(
-            r'\\.\pip\ergonomics_pipe',
+           r'\\.\pipe\ergonomics_pipe',
             win32file.GENERIC_READ | win32file.GENERIC_WRITE,
             0, None, win32file.OPEN_EXISTING, 0, None
         )

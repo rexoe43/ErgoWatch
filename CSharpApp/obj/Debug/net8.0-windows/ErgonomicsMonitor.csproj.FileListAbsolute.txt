@@ -6,7 +6,9 @@ C:\Users\Kev\ErgoWatch\CSharpApp\bin\Debug\net8.0-windows\ErgonomicsMonitor.pdb
 C:\Users\Kev\ErgoWatch\CSharpApp\bin\Debug\net8.0-windows\Microsoft.Toolkit.Uwp.Notifications.dll
 C:\Users\Kev\ErgoWatch\CSharpApp\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
 C:\Users\Kev\ErgoWatch\CSharpApp\bin\Debug\net8.0-windows\Serilog.dll
+C:\Users\Kev\ErgoWatch\CSharpApp\bin\Debug\net8.0-windows\Serilog.Sinks.Console.dll
 C:\Users\Kev\ErgoWatch\CSharpApp\bin\Debug\net8.0-windows\Serilog.Sinks.File.dll
+C:\Users\Kev\ErgoWatch\CSharpApp\bin\Debug\net8.0-windows\System.Drawing.Common.dll
 C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ErgonomicsMonitor.csproj.AssemblyReference.cache
 C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\Views\AlertPopup.baml
 C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\Views\MainWindow.baml
@@ -26,5 +28,3 @@ C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\refint\ErgonomicsMonit
 C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ErgonomicsMonitor.pdb
 C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ErgonomicsMonitor.genruntimeconfig.cache
 C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ref\ErgonomicsMonitor.dll
-C:\Users\Kev\ErgoWatch\CSharpApp\bin\Debug\net8.0-windows\System.Drawing.Common.dll
-C:\Users\Kev\ErgoWatch\CSharpApp\bin\Debug\net8.0-windows\Serilog.Sinks.Console.dll
