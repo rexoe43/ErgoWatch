@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ErgonomicsMonitor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7dab395846b62ec95ef2a9f7f497c1c089190247")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c32ab6e8b2b74f504fd3de74b603e8f41df5de50")]
 [assembly: System.Reflection.AssemblyProductAttribute("ErgonomicsMonitor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ErgonomicsMonitor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
