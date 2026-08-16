@@ -1,3 +1,12 @@
+C:\Users\Kev\ErgoWatch\CSharpApp\bin\Debug\net8.0-windows\ErgonomicsMonitor.exe
+C:\Users\Kev\ErgoWatch\CSharpApp\bin\Debug\net8.0-windows\ErgonomicsMonitor.deps.json
+C:\Users\Kev\ErgoWatch\CSharpApp\bin\Debug\net8.0-windows\ErgonomicsMonitor.runtimeconfig.json
+C:\Users\Kev\ErgoWatch\CSharpApp\bin\Debug\net8.0-windows\ErgonomicsMonitor.dll
+C:\Users\Kev\ErgoWatch\CSharpApp\bin\Debug\net8.0-windows\ErgonomicsMonitor.pdb
+C:\Users\Kev\ErgoWatch\CSharpApp\bin\Debug\net8.0-windows\Microsoft.Toolkit.Uwp.Notifications.dll
+C:\Users\Kev\ErgoWatch\CSharpApp\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\Kev\ErgoWatch\CSharpApp\bin\Debug\net8.0-windows\Serilog.dll
+C:\Users\Kev\ErgoWatch\CSharpApp\bin\Debug\net8.0-windows\Serilog.Sinks.File.dll
 C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ErgonomicsMonitor.csproj.AssemblyReference.cache
 C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\Views\AlertPopup.baml
 C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\Views\MainWindow.baml
@@ -11,3 +20,9 @@ C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ErgonomicsMonitor.Asse
 C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ErgonomicsMonitor.AssemblyInfo.cs
 C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ErgonomicsMonitor.csproj.CoreCompileInputs.cache
 C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ErgonomicsMonitor.sourcelink.json
+C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\Ergonomi.28F1BE30.Up2Date
+C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ErgonomicsMonitor.dll
+C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\refint\ErgonomicsMonitor.dll
+C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ErgonomicsMonitor.pdb
+C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ErgonomicsMonitor.genruntimeconfig.cache
+C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ref\ErgonomicsMonitor.dll
