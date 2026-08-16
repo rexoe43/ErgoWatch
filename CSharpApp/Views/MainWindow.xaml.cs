@@ -1,5 +1,5 @@
 using System.Windows;
-
+using System.ComponentModel;
 namespace CSharpApp.Views
 {
     public partial class MainWindow : Window
@@ -8,10 +8,10 @@ namespace CSharpApp.Views
         {
             InitializeComponent();
 
-            this.Closing += MainWindow_Closing;
+            this.Closing += MainWindow_Closing!;
         }
 
-        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void MainWindow_Closing(object? sender, CancelEventArgs e)
         {
             e.Cancel = true;
             this.Hide();
