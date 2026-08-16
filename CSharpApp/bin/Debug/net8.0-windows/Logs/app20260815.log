@@ -56,3 +56,48 @@ System.IO.IOException: Ha terminado la canalización.
    at CSharpApp.Services.PipeListener.ListenForConnections() in C:\Users\Kev\ErgoWatch\CSharpApp\Services\PipeListener.cs:line 59
 2026-08-15 23:25:27.488 -06:00 [INF] Named Pipe service stopped
 2026-08-15 23:25:27.488 -06:00 [INF] Ergowatch Closed
+2026-08-15 23:29:07.384 -06:00 [INF] Ergowatch started
+2026-08-15 23:29:07.785 -06:00 [INF] Named Pipe service started: ergonomics_pipe
+2026-08-15 23:29:07.787 -06:00 [INF] Communication Service Started
+2026-08-15 23:29:21.027 -06:00 [INF] Client connected to pipe
+2026-08-15 23:29:21.470 -06:00 [INF] Alert received: posture - high - Bas posture detected. Neckle angle: 22°
+2026-08-15 23:29:21.472 -06:00 [INF] Alert received: posture - high
+2026-08-15 23:29:21.614 -06:00 [ERR] Error in the service (Named Pipe)
+System.ObjectDisposedException: Cannot access a closed pipe.
+   at System.IO.Pipes.NamedPipeServerStream.CheckDisconnectOperations()
+   at System.IO.Pipes.NamedPipeServerStream.Disconnect()
+   at CSharpApp.Services.PipeListener.ListenForConnections() in C:\Users\Kev\ErgoWatch\CSharpApp\Services\PipeListener.cs:line 66
+2026-08-15 23:29:31.030 -06:00 [INF] Client connected to pipe
+2026-08-15 23:29:31.030 -06:00 [INF] Alert received: posture - high - Bas posture detected. Neckle angle: 22°
+2026-08-15 23:29:31.030 -06:00 [INF] Alert received: posture - high
+2026-08-15 23:29:31.146 -06:00 [ERR] Error in the service (Named Pipe)
+System.ObjectDisposedException: Cannot access a closed pipe.
+   at System.IO.Pipes.NamedPipeServerStream.CheckDisconnectOperations()
+   at System.IO.Pipes.NamedPipeServerStream.Disconnect()
+   at CSharpApp.Services.PipeListener.ListenForConnections() in C:\Users\Kev\ErgoWatch\CSharpApp\Services\PipeListener.cs:line 66
+2026-08-15 23:29:41.031 -06:00 [INF] Client connected to pipe
+2026-08-15 23:29:41.031 -06:00 [INF] Alert received: posture - high - Bas posture detected. Neckle angle: 22°
+2026-08-15 23:29:41.031 -06:00 [INF] Alert received: posture - high
+2026-08-15 23:29:41.144 -06:00 [ERR] Error in the service (Named Pipe)
+System.ObjectDisposedException: Cannot access a closed pipe.
+   at System.IO.Pipes.NamedPipeServerStream.CheckDisconnectOperations()
+   at System.IO.Pipes.NamedPipeServerStream.Disconnect()
+   at CSharpApp.Services.PipeListener.ListenForConnections() in C:\Users\Kev\ErgoWatch\CSharpApp\Services\PipeListener.cs:line 66
+2026-08-15 23:29:51.032 -06:00 [INF] Client connected to pipe
+2026-08-15 23:29:51.032 -06:00 [INF] Alert received: posture - high - Bas posture detected. Neckle angle: 22°
+2026-08-15 23:29:51.032 -06:00 [INF] Alert received: posture - high
+2026-08-15 23:29:51.151 -06:00 [ERR] Error in the service (Named Pipe)
+System.ObjectDisposedException: Cannot access a closed pipe.
+   at System.IO.Pipes.NamedPipeServerStream.CheckDisconnectOperations()
+   at System.IO.Pipes.NamedPipeServerStream.Disconnect()
+   at CSharpApp.Services.PipeListener.ListenForConnections() in C:\Users\Kev\ErgoWatch\CSharpApp\Services\PipeListener.cs:line 66
+2026-08-15 23:29:56.385 -06:00 [ERR] Error in the service (Named Pipe)
+System.IO.IOException: Ha terminado la canalización.
+   at System.IO.Pipes.PipeStream.PipeValueTaskSource.GetResult(Int16 token)
+   at System.IO.Pipes.PipeStream.PipeValueTaskSource.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at System.IO.Pipes.NamedPipeServerStream.WaitForConnection()
+   at CSharpApp.Services.PipeListener.ListenForConnections() in C:\Users\Kev\ErgoWatch\CSharpApp\Services\PipeListener.cs:line 59
+2026-08-15 23:29:57.384 -06:00 [INF] Named Pipe service stopped
+2026-08-15 23:29:57.385 -06:00 [INF] Ergowatch Closed
