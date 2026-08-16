@@ -7,6 +7,14 @@ namespace CSharpApp.Views
         public MainWindow()
         {
             InitializeComponent();
+
+            this.Closing += MainWindow_Closing;
+        }
+
+        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = true;
+            this.Hide();
         }
 
         public void UpdateStatus(string message)
@@ -22,14 +30,6 @@ namespace CSharpApp.Views
             Dispatcher.Invoke(() =>
             {
                 LastAlertText.Text = $"Last Alert: {message}";
-            });
-        }
-
-        public void UpdateTimer(string time)
-        {
-            Dispatcher.Invoke(() =>
-            {
-                TimerText.Text = $"Timer: {time}";
             });
         }
 

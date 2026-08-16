@@ -26,3 +26,4 @@ C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\refint\ErgonomicsMonit
 C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ErgonomicsMonitor.pdb
 C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ErgonomicsMonitor.genruntimeconfig.cache
 C:\Users\Kev\ErgoWatch\CSharpApp\obj\Debug\net8.0-windows\ref\ErgonomicsMonitor.dll
+C:\Users\Kev\ErgoWatch\CSharpApp\bin\Debug\net8.0-windows\System.Drawing.Common.dll

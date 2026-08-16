@@ -11,7 +11,8 @@
           "Microsoft.Toolkit.Uwp.Notifications": "7.1.3",
           "Newtonsoft.Json": "13.0.3",
           "Serilog": "4.0.1",
-          "Serilog.Sinks.File": "5.0.0"
+          "Serilog.Sinks.File": "5.0.0",
+          "System.Drawing.Common": "8.0.6"
         },
         "runtime": {
           "ErgonomicsMonitor.dll": {}
@@ -28,6 +29,7 @@
           }
         }
       },
+      "Microsoft.Win32.SystemEvents/8.0.0": {},
       "Newtonsoft.Json/13.0.3": {
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
@@ -55,6 +57,17 @@
           }
         }
       },
+      "System.Drawing.Common/8.0.6": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.624.26909"
+          }
+        }
+      },
       "System.ValueTuple/4.5.0": {}
     }
   },
@@ -70,6 +83,13 @@
       "sha512": "sha512-A1dglAzb24gjehmb7DwGd07mfyZ1gacAK7ObE0KwDlRc3mayH2QW7cSOy3TkkyELjLg19OQBuhPOj4SpXET9lg==",
       "path": "microsoft.toolkit.uwp.notifications/7.1.3",
       "hashPath": "microsoft.toolkit.uwp.notifications.7.1.3.nupkg.sha512"
+    },
+    "Microsoft.Win32.SystemEvents/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9opKRyOKMCi2xJ7Bj7kxtZ1r9vbzosMvRrdEhVhDz8j8MoBGgB+WmC94yH839NPH+BclAjtQ/pyagvi/8gDLkw==",
+      "path": "microsoft.win32.systemevents/8.0.0",
+      "hashPath": "microsoft.win32.systemevents.8.0.0.nupkg.sha512"
     },
     "Newtonsoft.Json/13.0.3": {
       "type": "package",
@@ -91,6 +111,13 @@
       "sha512": "sha512-uwV5hdhWPwUH1szhO8PJpFiahqXmzPzJT/sOijH/kFgUx+cyoDTMM8MHD0adw9+Iem6itoibbUXHYslzXsLEAg==",
       "path": "serilog.sinks.file/5.0.0",
       "hashPath": "serilog.sinks.file.5.0.0.nupkg.sha512"
+    },
+    "System.Drawing.Common/8.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aSwRnJzz6fZ73JvWMMG0KvBwOnXsBTFtfHLriQyAPrDIZ+NrDfl15GWbO/A35k0dtH77D7jfxzEcFF7RONtU/w==",
+      "path": "system.drawing.common/8.0.6",
+      "hashPath": "system.drawing.common.8.0.6.nupkg.sha512"
     },
     "System.ValueTuple/4.5.0": {
       "type": "package",
