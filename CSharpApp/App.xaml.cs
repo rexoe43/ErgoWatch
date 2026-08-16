@@ -1,5 +1,8 @@
 using System.Windows;
 using Forms = System.Windows.Forms;
+using CSharpApp.Services;
+using CSharpApp.Models;
+using Serilog;
 
 namespace CSharpApp
 {
@@ -7,15 +10,50 @@ namespace CSharpApp
     {
         private Forms.NotifyIcon? _trayIcon;
         private Window? _mainWindow;
+        private PipeListener? _pipeListener;
         protected override void OnStartup(System.Windows.StartupEventArgs e)
         {
             base.OnStartup(e);
+
+            LogService.Initialize();
 
             CreateTrayIcon();
             _mainWindow = new Views.MainWindow();
             _mainWindow.Show();
         }
 
+        private void StartPipeListener()
+        {
+            _pipeListener = new PipeListener();
+            _pipeListener.AlertReceived += OnAlertReceived;
+            _pipeListener.Start();
+            Log.Information("Communication Service Started");
+        }
+
+        private void OnAlertReceived(object? sender, AlertModel alert)
+        {
+            Log.Information("Alert received: {Type} - {Severity}", alert.Type, alert.Severity);
+            if(_mainWindow is Views.MainWindow mainWindow)
+            {
+                mainWindow.UpdateStatus($"Warning: {alert.Message}");
+                mainWindow.UpdateLastAlert($"{alert.Type} - {alert.Severity}");
+
+                if (alert.Severity == "high" || alert.Severity == "medium")
+                {
+                    if (_trayIcon != null)
+                    {
+                        _trayIcon.ShowBalloonTip(
+                            5000,
+                            $"{alert.Type.ToUpper()}",
+                            alert.Message,
+                            Forms.ToolTipIcon.Warning
+
+                        );
+                    }
+                    
+                }
+            }
+        }
         private void CreateTrayIcon()
         {
             _trayIcon = new Forms.NotifyIcon();
@@ -80,11 +118,14 @@ namespace CSharpApp
 
         protected override void OnExit(System.Windows.ExitEventArgs e)
         {
+            _pipeListener?.Stop();
             if (_trayIcon != null)
             {
                 _trayIcon.Visible = false;
                 _trayIcon.Dispose();
             }
+            
+            LogService.Shutdown();
             base.OnExit(e);
             
         }
